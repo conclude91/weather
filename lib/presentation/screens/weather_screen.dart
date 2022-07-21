@@ -3,10 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/weather_bloc.dart';
 
+/// This class is the user interface of the weather screen.
 class WeatherScreen extends StatelessWidget {
   const WeatherScreen({Key? key}) : super(key: key);
 
-  String _weatherIcon(String iconCode) =>
+  // Get uri path of weather icon by code.
+  String _getWeatherIcon(String iconCode) =>
       'http://openweathermap.org/img/wn/$iconCode@2x.png';
 
   @override
@@ -59,7 +61,7 @@ class WeatherScreen extends StatelessWidget {
                             ),
                             Image(
                               image: NetworkImage(
-                                _weatherIcon(
+                                _getWeatherIcon(
                                   state.weatherModel.iconCode,
                                 ),
                               ),

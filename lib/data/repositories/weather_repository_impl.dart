@@ -2,6 +2,7 @@ import '../../domain/repositories/weather_repository.dart';
 import '../datasources/remote/weather_remote_datasource.dart';
 import '../models/weather_model.dart';
 
+/// This is an implementation class of [WeatherRepository].
 class WeatherRepositoryImpl implements WeatherRepository {
   WeatherRepositoryImpl({required this.weatherRemoteDataSource});
 

@@ -1,5 +1,6 @@
 part of 'weather_bloc.dart';
 
+/// Abstract class to accommodate weather event conditions.
 abstract class WeatherEvent extends Equatable {
   const WeatherEvent();
 
@@ -7,6 +8,7 @@ abstract class WeatherEvent extends Equatable {
   List<Object> get props => [];
 }
 
+/// Event when [WeatherEvent] detects a change in city name.
 class OnCityChanged extends WeatherEvent {
   const OnCityChanged(this.cityName);
 

@@ -1,6 +1,8 @@
 import '../../domain/entities/weather_entity.dart';
 
+/// Instance of class [WeatherEntity] which has the role of fetching and parsing data from/to json.
 class WeatherModel extends WeatherEntity {
+  /// Fetch data from json format.
   WeatherModel.fromJson(Map<String, dynamic> json)
       : super(
           cityName: json['name'],
@@ -12,6 +14,7 @@ class WeatherModel extends WeatherEntity {
           humidity: json['main']['humidity'],
         );
 
+  /// Parse data into json format.
   Map<String, dynamic> toJson() => {
         'weather': [
           {

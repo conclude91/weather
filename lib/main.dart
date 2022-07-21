@@ -5,12 +5,15 @@ import 'injection.dart' as di; // dependency injector
 import 'presentation/bloc/weather_bloc.dart';
 import 'presentation/screens/weather_screen.dart';
 
+/// The main method in this project.
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await di.init(); // inject all dependecies and wait for it is done
+  /// Inject all dependecies injector and wait for it is done
+  await di.init(); 
   runApp(const MyApp());
 }
 
+/// The main widget class in this project.
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
